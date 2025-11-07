@@ -23,7 +23,7 @@ export function index(): void {
         p(clicks())
     })
 
-    img({ src: "favicon.svg", style: "width: 512px; height: 512px" })
+    img({ src: "assets/favicon.svg", style: "width: 512px; height: 512px" })
 
     let pos = 0
     let dir = 1

@@ -1,6 +1,16 @@
 import * as D from "dynein"
-const { p } = D.elements
+import * as router from "../router"
+import * as cookies from "../cookies"
+
+const { p, button } = D.elements
 
 export function warning(): void {
-    p("Warning page!!!")
+    p("Warning Page")
+
+    button({
+        onclick: () => {
+            cookies.set("seenWarning", "true")
+            router.replace("")
+        }
+    }, "Ok!")
 }
