@@ -13,7 +13,7 @@ window.addEventListener('popstate', () => {
  */
 export function pageIs(path: string | RegExp): () => boolean {
     return () => {
-        if(path instanceof RegExp) {
+        if (path instanceof RegExp) {
             return path.test(location)
         } else {
             return path === location
@@ -39,7 +39,7 @@ export function redirect(path: string): void {
  * @param path The page to be replaced with
  */
 export function replace(path: string): void {
-    if (!path.includes(".")) {
+    if (path !== "" && !path.includes(".")) {
         path += ".html"
     }
 

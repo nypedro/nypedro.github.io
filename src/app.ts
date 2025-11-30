@@ -4,17 +4,21 @@ import * as pages from "./pages"
 import * as cookies from "./utils/cookies"
 
 const { p } = D.elements
+const seenWarning = cookies.getOrDefault("seenWarning", false)
 
 D.createRoot(() => {
     D.mountBody(() => {
-        const seenWarning = cookies.get("seenWarning", "false") === "true"
+        // Show warning if the user hasn't seen it already
         if (!seenWarning && !router.pageIs("warning")()) {
-            router.replace("warning") // Show warning if the user hasn't seen it already
-        } else if (seenWarning && router.pageIs("warning")()) {
-            router.replace("") // Otherwise prevent seening the warning page
+            router.replace("warning")
         }
 
-        D.addIf(router.pageIs(/(index)?$/), () => {
+        // Prevent seeing the warning page if it's already been seen
+        if (seenWarning && router.pageIs("warning")()) {
+            router.replace("")
+        }
+
+        D.addIf(router.pageIs(/^(index)?$/), () => {
             pages.index()
         }).elseif(router.pageIs("about"), () => {
             pages.about()
