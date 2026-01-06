@@ -21,6 +21,12 @@ body {
 
     @include font(larger, 600);
 
+    .link {
+        color: $color-text;
+        text-decoration: underline;
+        white-space: nowrap;
+    }
+
     .container-vertical {
         display: flex;
         align-items: center;

@@ -2,40 +2,57 @@ import * as D from "dynein"
 
 const { div, p, header, a, section } = D.elements
 
+type Linkable = string | (() => HTMLAnchorElement)
 type ProjectCardType = {
-    title: string,
-    figure: () => HTMLImageElement,
+    title: Linkable,
+    img: () => HTMLElement,
     description: string | string[],
-    stack?: string[]
+    stack?: Linkable[]
     reversed?: boolean
-    link?: string
 }
 
-export function projectCard({ title, description, figure, reversed, stack, link }: ProjectCardType) {
-
+export function projectCard({ title, description, img, reversed, stack }: ProjectCardType) {
     div({
         class: "project-card" + (reversed ? " reverse" : "")
     }, () => {
-        figure()
+        img()
 
         section({}, () => {
-            if (link !== undefined) {
-                a({ class: "title", href: link }, () => {
-                    header(title)
-                })
-            } else {
-                header({ class: "title" }, title)
-            }
+            header({ class: "title" }, () => addLinkable(title))
 
             for (const paragraph of listify(description)) {
                 p({ class: "description" }, paragraph)
             }
 
-            if (stack !== undefined) {
-                p({ class: "stack" }, "Stack: " + stack.join(", "))
+            if (stack) {
+                addStack(stack)
             }
         })
     })
+}
+
+function addStack(stack: Linkable[]) {
+    p({ class: "stack" }, () => {
+        D.addText("Stack: ")
+
+        let first = true
+        for (const stackElement of stack) {
+            if (!first) {
+                D.addText(", ")
+            }
+
+            addLinkable(stackElement)
+            first = false
+        }
+    })
+}
+
+function addLinkable(text: Linkable) {
+    if (typeof text === "string") {
+        D.addText(text)
+    } else {
+        text()
+    }
 }
 
 // If maybelList is a single element, wrap it in an array

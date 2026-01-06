@@ -15,7 +15,7 @@
     padding: 1em;
     gap: 1em;
 
-    width: 65vw;
+    width: 70vw;
     height: fit-content;
     min-height: 45vh;
 
@@ -27,7 +27,6 @@
     color: base.$color-text;
 
     img {
-        max-width: 100%;
         max-height: 45vh;
         border-radius: 1em;
     }
@@ -36,7 +35,7 @@
         @extend .container-vertical;
 
         flex: 1 1 20vw;
-        min-width: 25vw;
+        min-width: 20vw;
         justify-content: center;
 
         .title {
