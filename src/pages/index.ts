@@ -1,5 +1,4 @@
-export * from "./about"
-export * from "./warning"
-export * from "./projects"
 export * from "./home"
+export * from "./about"
+export * from "./projects"
 
