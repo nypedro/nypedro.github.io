@@ -1,5 +1,4 @@
 import * as D from "dynein"
-import * as router from "../utils/router"
 
 const { a, img, nav } = D.elements
 const $ = D.createSignal

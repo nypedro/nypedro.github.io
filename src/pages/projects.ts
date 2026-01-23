@@ -1,14 +1,11 @@
 import * as D from "dynein"
 import { header, projectCard } from "../components"
 
-const { img, a, main } = D.elements
+const { img, a, main, em } = D.elements
 
 export function projects(): void {
-
-
     main({ class: "project-list" }, () => {
-        // TODO: fix this garbage
-        header("transform: translate(-3em)")
+        header()
 
         projectCard({
             title: "OneSearch",
