@@ -9,7 +9,7 @@ export function about(): void {
         header()
 
         main({ class: "content" }, () => {
-            img({ class: "about-banner", src: "assets/about/banner.png" })
+            img({ class: "about-banner", src: "assets/about/banner.avif" })
 
             p({ class: "title" }, () => {
                 D.addText("Hello, I'm ")

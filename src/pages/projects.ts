@@ -19,7 +19,7 @@ export function projects(): void {
                 link("React", "https://react.dev/"),
             ],
             img: () => img({
-                src: "/assets/projects/onesearch1.png"
+                src: "/assets/projects/onesearch1.avif"
             }),
         })
 
@@ -35,7 +35,7 @@ export function projects(): void {
                 link("GitHub Pages", "https://sass-lang.com")
             ],
             img: () => img({
-                src: "/assets/projects/website.png"
+                src: "/assets/projects/website.avif"
             }),
             reversed: true
         })
@@ -53,7 +53,7 @@ export function projects(): void {
                 link("Tailscale", "https://tailscale.com/"),
             ],
             img: () => img({
-                src: "/assets/projects/homelab.png"
+                src: "/assets/projects/homelab.avif"
             }),
         })
 
@@ -66,7 +66,7 @@ export function projects(): void {
                 link("Common Gateway Interface", "https://en.wikipedia.org/wiki/Common_Gateway_Interface")
             ],
             img: () => img({
-                src: "/assets/projects/sql-server.png"
+                src: "/assets/projects/sql-server.avif"
             }),
             reversed: true
         })
@@ -82,7 +82,7 @@ export function projects(): void {
                 link("Pillow", "https://pillow.readthedocs.io/en/stable/")
             ],
             img: () => img({
-                src: "/assets/projects/bots.png"
+                src: "/assets/projects/bots.avif"
             }),
         })
     })

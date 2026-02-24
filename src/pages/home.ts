@@ -6,7 +6,7 @@ export function home(): void {
     div({ class: "column" }, () => {
         main({ class: "content" }, () => {
             div({ class: "bio" }, () => {
-                img({ class: "headshot", src: "assets/headshot.png" })
+                img({ class: "headshot", src: "assets/headshot.avif" })
 
                 section({ class: "container-vertical" }, () => {
                     header({ class: "title" }, "Hello :)")

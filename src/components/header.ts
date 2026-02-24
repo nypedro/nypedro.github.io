@@ -8,7 +8,7 @@ export function header(style?: any) {
         a({ href: "index.html" }, () => {
             img({
                 class: "header-image",
-                src: "assets/headshot.png"
+                src: "assets/headshot.avif"
             })
         })
 
