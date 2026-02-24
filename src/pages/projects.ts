@@ -41,12 +41,12 @@ export function projects(): void {
         })
 
         projectCard({
-            title: "Home Lab",
+            title: "Self-Hosting    ",
             description: "I've (not-so-) recently fallen into the self-hosting rabbithole, and finally had the chance to set one up myself. Although I'm operating on a college student budget, I currently self-host a network-wide ad blocker, NAS, and media server. Everything is fully backed-up using 3-2-1 backup rule!",
             stack: [
                 link("Pi-hole", "https://pi-hole.net/"),
                 link("Backblaze B2", "https://www.backblaze.com/cloud-storage"),
-                link("Copyparty", "https://github.com/9001/copyparty"),
+                link("copyparty", "https://github.com/9001/copyparty"),
                 link("nginx", "https://nginx.org/"),
                 link("Docker", "https://www.docker.com/"),
                 link("Jellyfin", "https://jellyfin.org/"),

@@ -12,7 +12,7 @@
 
     color: base.$color-text-light;
 
-    .home {
+    .content {
         @extend .container-vertical;
 
         width: 100%;
@@ -20,6 +20,7 @@
 
         gap: 2rem;
         padding: 3rem;
+        margin: 3rem;
         border-radius: 0.5rem;
 
         background-color: rgb(from base.$color-background r g b / 50%);
@@ -44,6 +45,7 @@
         }
 
         .title {
+            white-space: nowrap;
             font-size: 7rem;
             filter: drop-shadow(0 0 0.3rem black);
         }

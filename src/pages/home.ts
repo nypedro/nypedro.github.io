@@ -4,7 +4,7 @@ const { section, img, div, main, header, p, a } = D.elements
 
 export function home(): void {
     div({ class: "column" }, () => {
-        main({ class: "home" }, () => {
+        main({ class: "content" }, () => {
             div({ class: "bio" }, () => {
                 img({ class: "headshot", src: "assets/headshot.png" })
 

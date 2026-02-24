@@ -15,11 +15,10 @@ $color-accent: #f341dd;
     font-weight: $weight;
 }
 
-
-
 body {
     overflow-x: hidden;
-    margin: 0em;
+    overscroll-behavior-y: none; // TODO: This isn't working. How to fix
+    margin: 0;
 
     @include font(larger, 600);
 
