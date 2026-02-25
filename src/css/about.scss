@@ -8,10 +8,9 @@
     padding-top: 10rem;
     padding-bottom: 10rem;
     margin: 0;
-
     justify-content: center;
 
-    background: url("/assets/ferns.avif");
+    background: url("/assets/about/snow.avif");
     color: base.$color-text-light;
 
     .title {
@@ -29,8 +28,9 @@
         padding: 3rem;
         gap: 2rem;
         border-radius: 0.5rem;
+        color: #050316;
 
-        background-color: rgb(from base.$color-background r g b / 50%);
+        background-color: rgb(from #6b7596 r g b / 50%);
         backdrop-filter: blur(5px);
         filter: drop-shadow(0 0 2rem black);
     }

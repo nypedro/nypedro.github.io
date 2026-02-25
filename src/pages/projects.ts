@@ -5,7 +5,7 @@ const { img, a, main, em } = D.elements
 
 export function projects(): void {
     main({ class: "project-list" }, () => {
-        header()
+        header({ season: "fall" })
 
         projectCard({
             title: "OneSearch",

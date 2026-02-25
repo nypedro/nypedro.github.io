@@ -16,20 +16,17 @@
     padding: 0.8rem;
 
     // Make eet pretty
-    box-shadow: 0px 5px 10px 1px #06110b;
-    background-color: rgb(from #0a2718 r g b / 70%);
     backdrop-filter: blur(30px);
 
     .header-button {
         padding: 0.5rem;
-
-        color: base.$color-text-light;
         font-size: 1.5rem;
+        color: inherit;
 
-        filter: drop-shadow(3px 3px 5px #000000);
+        filter: drop-shadow(3px 3px 5px #000);
 
         &:hover {
-            filter: brightness(80%) drop-shadow(9px 9px 5px #000000);
+            filter: brightness(80%) drop-shadow(9px 9px 5px #000);
             transform: translate(0, -3px)
         }
     }
@@ -41,14 +38,37 @@
         padding: 0;
 
         border-radius: 1rem;
-        border: 3px solid base.$color-text-light;
+        border: 3px solid;
         display: block;
 
-        filter: drop-shadow(3px 3px 5px #000000);
+        filter: drop-shadow(3px 3px 5px #000);
 
         &:hover {
-            filter: brightness(80%) drop-shadow(9px 9px 5px #000000);
+            filter: brightness(80%) drop-shadow(9px 9px 5px #000);
             transform: translate(0, -3px)
         }
     }
+}
+
+@mixin season($text, $shadow, $background) {
+    color: $text;
+
+    box-shadow: 0px 5px 10px 1px $shadow;
+    background-color: rgb(from $background r g b / 70%);
+
+    & .header-image {
+        border-color: $text;
+    }
+}
+
+.summer {
+    @include season(#c9dac9, #06110b, #0a2718);
+}
+
+.fall {
+    @include season(#cfb48a, #110d06, #632f17);
+}
+
+.winter {
+    @include season(#c3e6e9, #2d323b, #758ab6);
 }

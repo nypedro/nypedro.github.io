@@ -16,15 +16,15 @@ export function home(): void {
 
             div({ class: "directory" }, () => {
                 addItem({
-                    title: "About",
-                    description: "Learn all about me!",
-                    href: "about.html"
-                })
-
-                addItem({
                     title: "Projects",
                     description: "Some cool projects I've worked on",
                     href: "projects.html"
+                })
+
+                addItem({
+                    title: "About",
+                    description: "Learn all about me!",
+                    href: "about.html"
                 })
 
                 addItem({

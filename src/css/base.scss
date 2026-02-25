@@ -23,7 +23,7 @@ body {
     @include font(larger, 600);
 
     .link {
-        color: $color-text-light;
+        color: inherit;
         text-decoration: underline;
         white-space: nowrap;
 

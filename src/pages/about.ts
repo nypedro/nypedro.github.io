@@ -6,7 +6,7 @@ const { div, main, img, p, a, span } = D.elements
 
 export function about(): void {
     div({ class: "about-column" }, () => {
-        header()
+        header({ season: "winter" })
 
         main({ class: "content" }, () => {
             img({ class: "about-banner", src: "assets/about/banner.avif" })
